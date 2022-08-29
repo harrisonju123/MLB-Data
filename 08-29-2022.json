@@ -132,6 +132,210 @@
     }
   },
   {
+    "Tony Gonsolin": {
+      "general": {
+        "siera": "average",
+        "x_fip": "average",
+        "ip": 5.569565217391304,
+        "k_rate": 1.0
+      },
+      "trends": {
+        "o_swing": {
+          "trend": 0.13569609584980177,
+          "compared_to_average": 1.1776965456844886
+        },
+        "o_contact": {
+          "trend": -0.2511814584980227,
+          "compared_to_average": 1.2583285350598838
+        },
+        "z_swing": {
+          "trend": -0.22060963537549472,
+          "compared_to_average": 1.3030848258977559
+        },
+        "z_contact": {
+          "trend": 0.1283451225296443,
+          "compared_to_average": 1.2824769571056656
+        },
+        "pi_zone": {
+          "trend": -0.04045576877470183,
+          "compared_to_average": 1.2206791916092081
+        },
+        "innings": {
+          "trend": -6.699604743083021,
+          "compared_to_average": 1.2797947908445144
+        },
+        "fastball_velocity": {
+          "trend": 0.9365968171937827,
+          "compared_to_average": 1.2521394914601682
+        },
+        "fastball_vertical": {
+          "trend": -0.2535682150983718,
+          "compared_to_average": 1.1969863703457644
+        },
+        "slider_vertical": {
+          "trend": 2.760956945905498,
+          "compared_to_average": 0.9421173262762185
+        },
+        "slider_velocity": {
+          "trend": -0.18237163043493848,
+          "compared_to_average": 1.254059010672208
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "splitter_vertical": {
+          "trend": 1.5868963878273876,
+          "compared_to_average": 1.129978890682765
+        },
+        "splitter_velocity": {
+          "trend": -2.051871944663958,
+          "compared_to_average": 1.255059087377569
+        }
+      }
+    }
+  },
+  {
+    "Miles Mikolas": {
+      "general": {
+        "siera": "below average",
+        "x_fip": "below average",
+        "ip": 6.3076923076923075,
+        "k_rate": 0.7777777777777778
+      },
+      "trends": {
+        "o_swing": {
+          "trend": 0.18607487487179505,
+          "compared_to_average": 1.1410731253711999
+        },
+        "o_contact": {
+          "trend": -0.01742293162393363,
+          "compared_to_average": 1.304157126753114
+        },
+        "z_swing": {
+          "trend": -0.13974698974359012,
+          "compared_to_average": 1.2867019801153161
+        },
+        "z_contact": {
+          "trend": -0.04376292239316288,
+          "compared_to_average": 1.2799105954931351
+        },
+        "pi_zone": {
+          "trend": 0.06252242358974358,
+          "compared_to_average": 1.2561090803499395
+        },
+        "innings": {
+          "trend": -3.052991452991472,
+          "compared_to_average": 1.2460716530483975
+        },
+        "fastball_velocity": {
+          "trend": -5.418123805811906,
+          "compared_to_average": 1.254957487881264
+        },
+        "fastball_vertical": {
+          "trend": 2.0267352830288248,
+          "compared_to_average": 1.211519412601333
+        },
+        "sinker_vertical": {
+          "trend": 3.3848478221297067,
+          "compared_to_average": 1.1841045018937368
+        },
+        "changeup_vertical": {
+          "trend": 5.96835942921104,
+          "compared_to_average": 0.8281184398264723
+        },
+        "changeup_velocity": {
+          "trend": 119.37756071418796,
+          "compared_to_average": 0.8110930205211406
+        },
+        "slider_vertical": {
+          "trend": -1.7777318055840985,
+          "compared_to_average": 1.3635295388997604
+        },
+        "slider_velocity": {
+          "trend": -2.5308210547010463,
+          "compared_to_average": 1.2491986758558178
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        }
+      }
+    }
+  },
+  {
+    "Pablo López": {
+      "general": {
+        "siera": "above average",
+        "x_fip": "average",
+        "ip": 5.6,
+        "k_rate": 1.0
+      },
+      "trends": {
+        "o_swing": {
+          "trend": 0.04750449384615483,
+          "compared_to_average": 1.2523780915972529
+        },
+        "o_contact": {
+          "trend": -0.5674640769230779,
+          "compared_to_average": 1.4437979005080588
+        },
+        "z_swing": {
+          "trend": -0.3501543753846182,
+          "compared_to_average": 1.3071926645847578
+        },
+        "z_contact": {
+          "trend": -0.21864463384615307,
+          "compared_to_average": 1.2848274535449276
+        },
+        "pi_zone": {
+          "trend": -0.04406649307692355,
+          "compared_to_average": 1.3732711673522366
+        },
+        "innings": {
+          "trend": 4.515384615384613,
+          "compared_to_average": 1.0295189504373177
+        },
+        "fastball_velocity": {
+          "trend": -5.254646907692486,
+          "compared_to_average": 1.2644085670884255
+        },
+        "fastball_vertical": {
+          "trend": -3.6869906410182405,
+          "compared_to_average": 1.3361725370953141
+        },
+        "sinker_vertical": {
+          "trend": 3.3838831769598383,
+          "compared_to_average": 1.0230765784083304
+        },
+        "changeup_vertical": {
+          "trend": 1.302447503542264,
+          "compared_to_average": 0.7166939980923637
+        },
+        "changeup_velocity": {
+          "trend": -0.27845460538466604,
+          "compared_to_average": 1.256386682499095
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": -2.9895668638460955,
+          "compared_to_average": 1.263168679198264
+        }
+      }
+    }
+  },
+  {
     "Ranger Suárez": {
       "general": {
         "siera": "below average",
@@ -400,6 +604,66 @@
     }
   },
   {
+    "Madison Bumgarner": {
+      "general": {
+        "siera": "worst",
+        "x_fip": "worst",
+        "ip": 5.32,
+        "k_rate": 0.6666666666666666
+      },
+      "trends": {
+        "o_swing": {
+          "trend": -0.03540555692307655,
+          "compared_to_average": 1.2181494560816635
+        },
+        "o_contact": {
+          "trend": -0.06767853076923219,
+          "compared_to_average": 1.2635431115611788
+        },
+        "z_swing": {
+          "trend": -0.22301850000000034,
+          "compared_to_average": 1.3320284554665514
+        },
+        "z_contact": {
+          "trend": 0.1200626446153849,
+          "compared_to_average": 1.2301387055117075
+        },
+        "pi_zone": {
+          "trend": -0.14688432384615505,
+          "compared_to_average": 1.2858975865367614
+        },
+        "innings": {
+          "trend": -6.584615384615377,
+          "compared_to_average": 1.3060410334346506
+        },
+        "fastball_velocity": {
+          "trend": -1.1639985815385412,
+          "compared_to_average": 1.2436356708124199
+        },
+        "fastball_vertical": {
+          "trend": -2.590438288080672,
+          "compared_to_average": 1.2855884308689234
+        },
+        "changeup_vertical": {
+          "trend": -7.990190945836123,
+          "compared_to_average": 1.4367549079130113
+        },
+        "changeup_velocity": {
+          "trend": -12.132668070769322,
+          "compared_to_average": 1.2604093968341756
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        }
+      }
+    }
+  },
+  {
     "Dylan Bundy": {
       "general": {
         "siera": "poor",
@@ -463,6 +727,206 @@
         "splitter_velocity": {
           "trend": 0.0,
           "compared_to_average": 0
+        }
+      }
+    }
+  },
+  {
+    "Javier Assad": {
+      "general": {
+        "siera": "worst",
+        "x_fip": "worst",
+        "ip": 4.0,
+        "k_rate": 0.5555555555555556
+      },
+      "trends": {
+        "o_swing": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "o_contact": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "z_swing": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "z_contact": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "pi_zone": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "innings": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "fastball_velocity": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "fastball_vertical": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "sinker_vertical": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "changeup_vertical": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "changeup_velocity": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "slider_vertical": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "slider_velocity": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        },
+        "cutter_vertical": {
+          "trend": 0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0,
+          "compared_to_average": 0.25
+        }
+      }
+    }
+  },
+  {
+    "Brayan Bello": {
+      "general": {
+        "siera": "average",
+        "x_fip": "average",
+        "ip": 3.6666666666666665,
+        "k_rate": 0.911111111111111
+      },
+      "trends": {
+        "o_swing": {
+          "trend": -2.8992473714285754,
+          "compared_to_average": 1.2899398990914954
+        },
+        "o_contact": {
+          "trend": 5.609771257142853,
+          "compared_to_average": 1.2185319190438249
+        },
+        "z_swing": {
+          "trend": 0.6440090285714238,
+          "compared_to_average": 1.246436712856372
+        },
+        "z_contact": {
+          "trend": 3.198710971428563,
+          "compared_to_average": 1.2317693653695816
+        },
+        "pi_zone": {
+          "trend": -2.5205690571428683,
+          "compared_to_average": 1.2693627491412154
+        },
+        "innings": {
+          "trend": 17.999999999999968,
+          "compared_to_average": 1.2183098591549295
+        },
+        "fastball_velocity": {
+          "trend": -0.10198557142989866,
+          "compared_to_average": 1.2494715421591327
+        },
+        "fastball_vertical": {
+          "trend": -21.434117105438578,
+          "compared_to_average": 1.2596600824957205
+        },
+        "sinker_vertical": {
+          "trend": -49.63217417353033,
+          "compared_to_average": 1.4449522234688295
+        },
+        "changeup_vertical": {
+          "trend": -6.096266088031608,
+          "compared_to_average": 1.25843724257588
+        },
+        "changeup_velocity": {
+          "trend": 4.559523799999054,
+          "compared_to_average": 1.2500568765723434
+        },
+        "slider_vertical": {
+          "trend": -30.110777075065776,
+          "compared_to_average": 1.3054165362058643
+        },
+        "slider_velocity": {
+          "trend": -40.16897380000047,
+          "compared_to_average": 1.251787814084505
+        }
+      }
+    }
+  },
+  {
+    "Chase Anderson": {
+      "general": {
+        "siera": "worst",
+        "x_fip": "worst",
+        "ip": 3.4285714285714284,
+        "k_rate": 0.6666666666666666
+      },
+      "trends": {
+        "o_swing": {
+          "trend": 0.6500561824175827,
+          "compared_to_average": 1.2029267120014882
+        },
+        "o_contact": {
+          "trend": -1.6225277010989025,
+          "compared_to_average": 1.4239198295098794
+        },
+        "z_swing": {
+          "trend": -0.8461579780219781,
+          "compared_to_average": 1.3386514392061795
+        },
+        "z_contact": {
+          "trend": -0.5834910065934052,
+          "compared_to_average": 1.3111905598559457
+        },
+        "pi_zone": {
+          "trend": -1.0073895780219793,
+          "compared_to_average": 1.3504968410918348
+        },
+        "innings": {
+          "trend": 14.1978021978022,
+          "compared_to_average": 1.0665236051502145
+        },
+        "fastball_velocity": {
+          "trend": 20.892279874724913,
+          "compared_to_average": 1.233009644193487
+        },
+        "fastball_vertical": {
+          "trend": 0.07667806454182377,
+          "compared_to_average": 1.2733176255804894
+        },
+        "sinker_vertical": {
+          "trend": 11.625240741900637,
+          "compared_to_average": 1.1608869399876414
+        },
+        "changeup_vertical": {
+          "trend": -8.6976296561202,
+          "compared_to_average": 1.3223008473354336
+        },
+        "changeup_velocity": {
+          "trend": 20.47372164835163,
+          "compared_to_average": 1.2272354608612537
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 21.31067212307651,
+          "compared_to_average": 1.2352384235143787
         }
       }
     }

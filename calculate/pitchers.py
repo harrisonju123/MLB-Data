@@ -129,8 +129,11 @@ def o_swing_trends(game_stats):
 
     x = np.arange(0, len(o_swings))
     y = np.array(o_swings)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z = []
+    try :
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
 
     return {
         "trend": z[0] * 100,
@@ -157,8 +160,12 @@ def o_contact_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z = []
+    try:
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
+
 
     return {
         "trend": z[0] * 100,
@@ -185,8 +192,11 @@ def z_swing_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z =[]
+    try:
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
 
     return {
         "trend": z[0] * 100,
@@ -213,8 +223,12 @@ def z_contact_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z = []
+    try:
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
+
 
     return {
         "trend": z[0] * 100,
@@ -241,8 +255,11 @@ def pitch_zones_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z = []
+    try:
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
 
     return {
         "trend": z[0] * 100,
@@ -269,8 +286,11 @@ def innings_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    z = []
+    try:
+        z = np.polyfit(x, y, 1)
+    except Exception as e:
+        z.append(0)
 
     return {
         "trend": z[0] * 100,
@@ -298,8 +318,10 @@ def fastball_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -326,8 +348,11 @@ def fastball_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
+
 
     return {
         "trend": z[0] * 100,
@@ -355,8 +380,10 @@ def sinker_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -384,8 +411,10 @@ def changeup_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -412,8 +441,10 @@ def changeup_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -441,8 +472,10 @@ def slider_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -469,8 +502,10 @@ def slider_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -497,8 +532,10 @@ def curveball_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -525,8 +562,10 @@ def curveball_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -553,8 +592,10 @@ def cutter_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -581,8 +622,10 @@ def cutter_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -609,8 +652,10 @@ def splitter_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -637,8 +682,10 @@ def splitter_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -665,8 +712,10 @@ def knuckball_velocity_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
@@ -693,8 +742,10 @@ def knuckleball_vertical_trend(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z = np.polyfit(x, y, 1)
-    print("{0}x + {1}".format(*z))
+    if len(stat_list) > 1:
+        z = np.polyfit(x, y, 1)
+    else:
+        z = [0]
 
     return {
         "trend": z[0] * 100,
