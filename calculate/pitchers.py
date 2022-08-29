@@ -36,36 +36,36 @@ def calculate_trends(player_stat):
         fa_velocity = fastball_velocity_trend(game_stats)
 
     sinker_vertical = 0.0000
-    if game_stats[0].get("piSI-Z", 0) > 0:
+    if game_stats[0].get("piSI-Z", 0) != 0:
         sinker_vertical = sinker_vertical_trend(game_stats)
 
     changeup_vertical = 0.0000
     changeup_velocity = 0.0000
-    if game_stats[0].get("piCH-Z", 0) > 0:
+    if game_stats[0].get("piCH-Z", 0) != 0:
         changeup_vertical = changeup_vertical_trend(game_stats)
         changeup_velocity = changeup_velocity_trend(game_stats)
 
     slider_vertical = 0.0000
     slider_velocity = 0.0000
-    if game_stats[0].get("piSL-Z", 0) > 0:
+    if game_stats[0].get("piSL-Z", 0) != 0:
         slider_vertical = slider_vertical_trend(game_stats)
         slider_velocity = slider_velocity_trend(game_stats)
 
     cutter_vertical = 0.0000
     cutter_velocity = 0.0000
-    if game_stats[0].get("piCU-Z", 0) > 0:
+    if game_stats[0].get("piCU-Z", 0) != 0:
         cutter_vertical = cutter_vertical_trend(game_stats)
         cutter_velocity = cutter_velocity_trend(game_stats)
 
     splitter_vertical = 0.0000
     splitter_velocity = 0.0000
-    if game_stats[0].get("piFS-Z", 0) > 0:
+    if game_stats[0].get("piFS-Z", 0) != 0:
         splitter_vertical = splitter_vertical_trend(game_stats)
         splitter_velocity = splitter_velocity_trend(game_stats)
 
     knuckleball_vertical = 0.0000
     knuckleball_velocity = 0.0000
-    if game_stats[0].get("piKN-Z", 0) > 0:
+    if game_stats[0].get("piKN-Z", 0) != 0:
         knuckleball_vertical = knuckleball_vertical_trend(game_stats)
         knuckleball_velocity = knuckball_velocity_trend(game_stats)
 
@@ -558,7 +558,7 @@ def cutter_vertical_trend(game_stats):
 
     return {
         "trend": z[0] * 100,
-        "compared_to_average": average_trend / average_stat
+        "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
     }
 
 
@@ -586,7 +586,7 @@ def cutter_velocity_trend(game_stats):
 
     return {
         "trend": z[0] * 100,
-        "compared_to_average": average_trend / average_stat
+        "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
     }
 
 

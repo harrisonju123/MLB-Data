@@ -51,6 +51,22 @@
         "changeup_velocity": {
           "trend": -2.1665393192307816,
           "compared_to_average": 1.2524149758787575
+        },
+        "slider_vertical": {
+          "trend": 1.7997914315714922,
+          "compared_to_average": 1.1718728701632704
+        },
+        "slider_velocity": {
+          "trend": -6.191559826923091,
+          "compared_to_average": 1.260612961715552
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": -5.194009439230849,
+          "compared_to_average": 1.2580763054142947
         }
       }
     }
@@ -95,6 +111,22 @@
         "fastball_vertical": {
           "trend": 2.110873693184284,
           "compared_to_average": 1.225885659591277
+        },
+        "slider_vertical": {
+          "trend": -2.7374658212329743,
+          "compared_to_average": 1.1969374429237654
+        },
+        "slider_velocity": {
+          "trend": 1.4548274707692053,
+          "compared_to_average": 1.2468972964888254
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
         }
       }
     }
@@ -151,6 +183,14 @@
         "changeup_velocity": {
           "trend": 6.184727646527216,
           "compared_to_average": 1.2349716959755734
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": -595.3601374737436,
+          "compared_to_average": 3.075711269854575
         }
       }
     }
@@ -271,6 +311,22 @@
         "changeup_velocity": {
           "trend": 15.325522588235291,
           "compared_to_average": 1.135666468793423
+        },
+        "slider_vertical": {
+          "trend": 2.004123659033736,
+          "compared_to_average": 1.41834034272632
+        },
+        "slider_velocity": {
+          "trend": 1.9056649794119345,
+          "compared_to_average": 1.248806071359606
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 28.879903705882555,
+          "compared_to_average": 1.2231937659118557
         }
       }
     }
@@ -331,6 +387,14 @@
         "slider_velocity": {
           "trend": -400.68827658088225,
           "compared_to_average": 1.5583653419831625
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
         }
       }
     }
@@ -375,6 +439,22 @@
         "fastball_vertical": {
           "trend": 2.971506479091369,
           "compared_to_average": 1.2537774053829809
+        },
+        "slider_vertical": {
+          "trend": 0.3499534056190902,
+          "compared_to_average": 1.0748462442854183
+        },
+        "slider_velocity": {
+          "trend": 1.9240947447771162,
+          "compared_to_average": 1.243225991524153
+        },
+        "cutter_vertical": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        },
+        "cutter_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
         },
         "splitter_vertical": {
           "trend": -2.560291434255222,
