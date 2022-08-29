@@ -118,8 +118,8 @@ def o_swing_trends(game_stats):
 
     for i, game in enumerate(game_stats):
         o_swing = game["O-Swing%"]
-        # go over just the first 4
-        if i <= 4:
+        # go over just the first 4 i < 4
+        if i < 4:
             trend_o_swing += o_swing
         total_o_swing += o_swing
         o_swings.append(o_swing)
@@ -150,7 +150,7 @@ def o_contact_trends(game_stats):
     for i, game in enumerate(game_stats):
         stat = game["O-Contact%"]
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -182,7 +182,7 @@ def z_swing_trends(game_stats):
     for i, game in enumerate(game_stats):
         stat = game["Z-Swing%"]
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -213,7 +213,7 @@ def z_contact_trends(game_stats):
     for i, game in enumerate(game_stats):
         stat = game["Z-Contact%"]
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -245,7 +245,7 @@ def pitch_zones_trends(game_stats):
     for i, game in enumerate(game_stats):
         stat = game["piZone%"]
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -276,7 +276,7 @@ def innings_trends(game_stats):
     for i, game in enumerate(game_stats):
         stat = game["IP"]
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -308,7 +308,7 @@ def fastball_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piFA-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -338,7 +338,7 @@ def fastball_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("FBv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -370,7 +370,7 @@ def sinker_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piSI-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -401,7 +401,7 @@ def changeup_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piCH-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -431,7 +431,7 @@ def changeup_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("CHv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -462,7 +462,7 @@ def slider_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piSL-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -492,7 +492,7 @@ def slider_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("SLv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -522,7 +522,7 @@ def curveball_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piCU-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -552,7 +552,7 @@ def curveball_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("CBv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -582,7 +582,7 @@ def cutter_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piFC-Z%", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -612,7 +612,7 @@ def cutter_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("CTv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -642,7 +642,7 @@ def splitter_vertical_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("piFS-Z", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -672,7 +672,7 @@ def splitter_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("SFv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -702,7 +702,7 @@ def knuckball_velocity_trend(game_stats):
     for i, game in enumerate(game_stats):
         stat = game.get("KNv", 0)
         # go over just the first 4
-        if i <= 4:
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)
@@ -731,8 +731,8 @@ def knuckleball_vertical_trend(game_stats):
 
     for i, game in enumerate(game_stats):
         stat = game.get("piKN-Z", 0)
-        # go over just the first 4
-        if i <= 4:
+        # go over just the first 4 i <
+        if i < 4:
             trend += stat
         total += stat
         stat_list.append(stat)

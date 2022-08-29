@@ -10,31 +10,31 @@
       "trends": {
         "o_swing": {
           "trend": 0.33659569461538463,
-          "compared_to_average": 1.0799512766759183
+          "compared_to_average": 0.9107706406158244
         },
         "o_contact": {
           "trend": -0.21252697923076982,
-          "compared_to_average": 1.3095370903761319
+          "compared_to_average": 1.017890565679931
         },
         "z_swing": {
           "trend": 0.042778113076922586,
-          "compared_to_average": 1.2246336828168305
+          "compared_to_average": 1.0041339277896382
         },
         "z_contact": {
           "trend": -0.3557445138461558,
-          "compared_to_average": 1.3086124728898276
+          "compared_to_average": 1.0570630476383847
         },
         "pi_zone": {
           "trend": -0.18431193000000046,
-          "compared_to_average": 1.2650286959620403
+          "compared_to_average": 1.0641177865940197
         },
         "innings": {
           "trend": 4.076923076923062,
-          "compared_to_average": 1.1093436034829205
+          "compared_to_average": 0.8958472873409243
         },
         "fastball_velocity": {
           "trend": 19.54508822846154,
-          "compared_to_average": 1.3059600005449474
+          "compared_to_average": 1.0455615955767124
         },
         "fastball_vertical": {
           "trend": -20.35086485055777,
@@ -42,23 +42,23 @@
         },
         "sinker_vertical": {
           "trend": 4.255992935098188,
-          "compared_to_average": 1.310205557224011
+          "compared_to_average": 1.0510618746053664
         },
         "changeup_vertical": {
           "trend": 2.220792567611324,
-          "compared_to_average": 1.3102075813734544
+          "compared_to_average": 1.0834999966297105
         },
         "changeup_velocity": {
           "trend": -2.1665393192307816,
-          "compared_to_average": 1.2524149758787575
+          "compared_to_average": 1.0020616608845652
         },
         "slider_vertical": {
           "trend": 1.7997914315714922,
-          "compared_to_average": 1.1718728701632704
+          "compared_to_average": 0.9788392796011057
         },
         "slider_velocity": {
           "trend": -6.191559826923091,
-          "compared_to_average": 1.260612961715552
+          "compared_to_average": 1.0061097153979788
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -66,7 +66,7 @@
         },
         "cutter_velocity": {
           "trend": -5.194009439230849,
-          "compared_to_average": 1.2580763054142947
+          "compared_to_average": 1.0085892142752941
         }
       }
     }
@@ -82,43 +82,43 @@
       "trends": {
         "o_swing": {
           "trend": 0.2359354799999993,
-          "compared_to_average": 1.1591705183792598
+          "compared_to_average": 0.9129994205618855
         },
         "o_contact": {
           "trend": 0.39891037769230814,
-          "compared_to_average": 1.217259201501388
+          "compared_to_average": 0.9341355457725055
         },
         "z_swing": {
           "trend": -0.09308427769230798,
-          "compared_to_average": 1.2811776314007117
+          "compared_to_average": 1.002121914466535
         },
         "z_contact": {
           "trend": 0.11363662538461476,
-          "compared_to_average": 1.2182526625896761
+          "compared_to_average": 0.9917465038098279
         },
         "pi_zone": {
           "trend": 0.09232497846153923,
-          "compared_to_average": 1.1671468731569192
+          "compared_to_average": 0.9478029470273669
         },
         "innings": {
           "trend": -3.7923076923077,
-          "compared_to_average": 1.3276980874316944
+          "compared_to_average": 1.0288592896174866
         },
         "fastball_velocity": {
           "trend": 8.430472632307556,
-          "compared_to_average": 1.2394687626148522
+          "compared_to_average": 0.9910923552370996
         },
         "fastball_vertical": {
           "trend": 2.110873693184284,
-          "compared_to_average": 1.225885659591277
+          "compared_to_average": 0.9711244931092282
         },
         "slider_vertical": {
           "trend": -2.7374658212329743,
-          "compared_to_average": 1.1969374429237654
+          "compared_to_average": 1.2265033730122525
         },
         "slider_velocity": {
           "trend": 1.4548274707692053,
-          "compared_to_average": 1.2468972964888254
+          "compared_to_average": 0.9984506471245889
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -142,43 +142,43 @@
       "trends": {
         "o_swing": {
           "trend": 0.13569609584980177,
-          "compared_to_average": 1.1776965456844886
+          "compared_to_average": 0.9513486237138542
         },
         "o_contact": {
           "trend": -0.2511814584980227,
-          "compared_to_average": 1.2583285350598838
+          "compared_to_average": 1.044750848527991
         },
         "z_swing": {
           "trend": -0.22060963537549472,
-          "compared_to_average": 1.3030848258977559
+          "compared_to_average": 1.0424301715575406
         },
         "z_contact": {
           "trend": 0.1283451225296443,
-          "compared_to_average": 1.2824769571056656
+          "compared_to_average": 1.025110601871654
         },
         "pi_zone": {
           "trend": -0.04045576877470183,
-          "compared_to_average": 1.2206791916092081
+          "compared_to_average": 0.9498386433138452
         },
         "innings": {
           "trend": -6.699604743083021,
-          "compared_to_average": 1.2797947908445144
+          "compared_to_average": 1.0528808208366218
         },
         "fastball_velocity": {
           "trend": 0.9365968171937827,
-          "compared_to_average": 1.2521394914601682
+          "compared_to_average": 1.0006838066073926
         },
         "fastball_vertical": {
           "trend": -0.2535682150983718,
-          "compared_to_average": 1.1969863703457644
+          "compared_to_average": 0.9739156245070859
         },
         "slider_vertical": {
           "trend": 2.760956945905498,
-          "compared_to_average": 0.9421173262762185
+          "compared_to_average": 0.7590492458916388
         },
         "slider_velocity": {
           "trend": -0.18237163043493848,
-          "compared_to_average": 1.254059010672208
+          "compared_to_average": 1.004737871067405
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -190,11 +190,11 @@
         },
         "splitter_vertical": {
           "trend": 1.5868963878273876,
-          "compared_to_average": 1.129978890682765
+          "compared_to_average": 0.5451473751288122
         },
         "splitter_velocity": {
           "trend": -2.051871944663958,
-          "compared_to_average": 1.255059087377569
+          "compared_to_average": 1.0053610310224304
         }
       }
     }
@@ -210,39 +210,39 @@
       "trends": {
         "o_swing": {
           "trend": 0.18607487487179505,
-          "compared_to_average": 1.1410731253711999
+          "compared_to_average": 0.9196829453802353
         },
         "o_contact": {
           "trend": -0.01742293162393363,
-          "compared_to_average": 1.304157126753114
+          "compared_to_average": 1.096788776218483
         },
         "z_swing": {
           "trend": -0.13974698974359012,
-          "compared_to_average": 1.2867019801153161
+          "compared_to_average": 0.9790913512992928
         },
         "z_contact": {
           "trend": -0.04376292239316288,
-          "compared_to_average": 1.2799105954931351
+          "compared_to_average": 1.0272007045740237
         },
         "pi_zone": {
           "trend": 0.06252242358974358,
-          "compared_to_average": 1.2561090803499395
+          "compared_to_average": 1.036584942032692
         },
         "innings": {
           "trend": -3.052991452991472,
-          "compared_to_average": 1.2460716530483975
+          "compared_to_average": 0.9968573224387179
         },
         "fastball_velocity": {
           "trend": -5.418123805811906,
-          "compared_to_average": 1.254957487881264
+          "compared_to_average": 1.0015596730977272
         },
         "fastball_vertical": {
           "trend": 2.0267352830288248,
-          "compared_to_average": 1.211519412601333
+          "compared_to_average": 0.9701875544717827
         },
         "sinker_vertical": {
           "trend": 3.3848478221297067,
-          "compared_to_average": 1.1841045018937368
+          "compared_to_average": 0.9310081608983589
         },
         "changeup_vertical": {
           "trend": 5.96835942921104,
@@ -254,11 +254,11 @@
         },
         "slider_vertical": {
           "trend": -1.7777318055840985,
-          "compared_to_average": 1.3635295388997604
+          "compared_to_average": 1.1085583385658542
         },
         "slider_velocity": {
           "trend": -2.5308210547010463,
-          "compared_to_average": 1.2491986758558178
+          "compared_to_average": 0.9980973280490916
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -282,47 +282,47 @@
       "trends": {
         "o_swing": {
           "trend": 0.04750449384615483,
-          "compared_to_average": 1.2523780915972529
+          "compared_to_average": 1.004029366064788
         },
         "o_contact": {
           "trend": -0.5674640769230779,
-          "compared_to_average": 1.4437979005080588
+          "compared_to_average": 1.1278490841301865
         },
         "z_swing": {
           "trend": -0.3501543753846182,
-          "compared_to_average": 1.3071926645847578
+          "compared_to_average": 1.0730000955107422
         },
         "z_contact": {
           "trend": -0.21864463384615307,
-          "compared_to_average": 1.2848274535449276
+          "compared_to_average": 1.0123134524738606
         },
         "pi_zone": {
           "trend": -0.04406649307692355,
-          "compared_to_average": 1.3732711673522366
+          "compared_to_average": 1.086980568349562
         },
         "innings": {
           "trend": 4.515384615384613,
-          "compared_to_average": 1.0295189504373177
+          "compared_to_average": 0.9293002915451896
         },
         "fastball_velocity": {
           "trend": -5.254646907692486,
-          "compared_to_average": 1.2644085670884255
+          "compared_to_average": 1.0101792365126505
         },
         "fastball_vertical": {
           "trend": -3.6869906410182405,
-          "compared_to_average": 1.3361725370953141
+          "compared_to_average": 1.0411608072058542
         },
         "sinker_vertical": {
           "trend": 3.3838831769598383,
-          "compared_to_average": 1.0230765784083304
+          "compared_to_average": 0.7448571552863679
         },
         "changeup_vertical": {
           "trend": 1.302447503542264,
-          "compared_to_average": 0.7166939980923637
+          "compared_to_average": 0.2608855839934574
         },
         "changeup_velocity": {
           "trend": -0.27845460538466604,
-          "compared_to_average": 1.256386682499095
+          "compared_to_average": 1.0043600371911792
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -330,7 +330,7 @@
         },
         "cutter_velocity": {
           "trend": -2.9895668638460955,
-          "compared_to_average": 1.263168679198264
+          "compared_to_average": 1.006921196810236
         }
       }
     }
@@ -346,47 +346,47 @@
       "trends": {
         "o_swing": {
           "trend": -0.28072992094861776,
-          "compared_to_average": 1.3436111724813904
+          "compared_to_average": 1.0364757728443137
         },
         "o_contact": {
           "trend": 0.5010144121964982,
-          "compared_to_average": 1.1969627770412063
+          "compared_to_average": 1.0321733281859438
         },
         "z_swing": {
           "trend": -0.07894789271597924,
-          "compared_to_average": 1.22378953428489
+          "compared_to_average": 0.9724079222519791
         },
         "z_contact": {
           "trend": 0.14783140146809537,
-          "compared_to_average": 1.2059957496863325
+          "compared_to_average": 0.9730634401234024
         },
         "pi_zone": {
           "trend": 0.40870737718802846,
-          "compared_to_average": 1.1469339287161893
+          "compared_to_average": 0.9341399797540152
         },
         "innings": {
           "trend": -8.85940146809712,
-          "compared_to_average": 1.4304721030042915
+          "compared_to_average": 1.1472103004291843
         },
         "fastball_velocity": {
           "trend": 0.08032555618302505,
-          "compared_to_average": 1.247102640997178
+          "compared_to_average": 0.9966539347202787
         },
         "fastball_vertical": {
           "trend": -1.8826928542354688,
-          "compared_to_average": 1.2892803387861569
+          "compared_to_average": 0.9990100560629138
         },
         "sinker_vertical": {
           "trend": 2.807672441164843,
-          "compared_to_average": 1.088169025815065
+          "compared_to_average": 0.8309574181488644
         },
         "changeup_vertical": {
           "trend": 6.542768310054374,
-          "compared_to_average": 0.9051117017627303
+          "compared_to_average": 0.655988340456743
         },
         "changeup_velocity": {
           "trend": 6.184727646527216,
-          "compared_to_average": 1.2349716959755734
+          "compared_to_average": 0.9843459458361158
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -394,7 +394,7 @@
         },
         "cutter_velocity": {
           "trend": -595.3601374737436,
-          "compared_to_average": 3.075711269854575
+          "compared_to_average": 2.464052300756476
         }
       }
     }
@@ -410,55 +410,55 @@
       "trends": {
         "o_swing": {
           "trend": 0.4944413260869563,
-          "compared_to_average": 1.1054587891586158
+          "compared_to_average": 0.8833670018878219
         },
         "o_contact": {
           "trend": -0.34876579743083136,
-          "compared_to_average": 1.3296066772151753
+          "compared_to_average": 1.120753545778295
         },
         "z_swing": {
           "trend": 0.4194934476284571,
-          "compared_to_average": 1.208034165460725
+          "compared_to_average": 0.937612606513364
         },
         "z_contact": {
           "trend": 0.10198468478260622,
-          "compared_to_average": 1.2913402279590696
+          "compared_to_average": 1.0041279950202229
         },
         "pi_zone": {
           "trend": -0.06107050790513879,
-          "compared_to_average": 1.242445077000218
+          "compared_to_average": 1.0290915755359868
         },
         "innings": {
           "trend": 7.381422924901182,
-          "compared_to_average": 1.1340668296658518
+          "compared_to_average": 0.8997555012224939
         },
         "fastball_velocity": {
           "trend": -1.7774309743083745,
-          "compared_to_average": 1.2504725914289607
+          "compared_to_average": 1.00288824885361
         },
         "fastball_vertical": {
           "trend": 5.654239036949175,
-          "compared_to_average": 1.1812252487820336
+          "compared_to_average": 0.9481827096215442
         },
         "sinker_vertical": {
           "trend": 5.298365733756652,
-          "compared_to_average": 1.1863824918021528
+          "compared_to_average": 0.9526607307136823
         },
         "slider_vertical": {
           "trend": -2.760385324261012,
-          "compared_to_average": 1.2466972858639518
+          "compared_to_average": 0.9529414318869532
         },
         "slider_velocity": {
           "trend": -7.83277751086961,
-          "compared_to_average": 1.2561400721757834
+          "compared_to_average": 1.0073859223478459
         },
         "splitter_vertical": {
           "trend": -4.2413676816764765,
-          "compared_to_average": 1.6744412185043693
+          "compared_to_average": 1.59871731636888
         },
         "splitter_velocity": {
           "trend": -1.682155192687872,
-          "compared_to_average": 1.2497603716028358
+          "compared_to_average": 1.0031257539470053
         }
       }
     }
@@ -474,51 +474,51 @@
       "trends": {
         "o_swing": {
           "trend": -0.38282346692307706,
-          "compared_to_average": 1.2719923779258746
+          "compared_to_average": 0.9838260538678338
         },
         "o_contact": {
           "trend": 0.11713880923076786,
-          "compared_to_average": 1.2836508122420838
+          "compared_to_average": 1.0187299941743475
         },
         "z_swing": {
           "trend": 0.1537369269230767,
-          "compared_to_average": 1.199428549855411
+          "compared_to_average": 0.955765868190236
         },
         "z_contact": {
           "trend": 0.39794518846153637,
-          "compared_to_average": 1.142237004447772
+          "compared_to_average": 0.9003758397428642
         },
         "pi_zone": {
           "trend": 0.212335081538462,
-          "compared_to_average": 1.2403448993227553
+          "compared_to_average": 1.011860310755328
         },
         "innings": {
           "trend": -3.6076923076923126,
-          "compared_to_average": 1.2624330527926548
+          "compared_to_average": 0.9276970160673297
         },
         "fastball_velocity": {
           "trend": -1.20387071769215,
-          "compared_to_average": 1.2535790716169781
+          "compared_to_average": 1.0029061911628663
         },
         "fastball_vertical": {
           "trend": 2.001241182392014,
-          "compared_to_average": 1.251088295054559
+          "compared_to_average": 1.012199608997295
         },
         "sinker_vertical": {
           "trend": 2.871378306956783,
-          "compared_to_average": 1.197550748987228
+          "compared_to_average": 0.968101974863888
         },
         "changeup_vertical": {
           "trend": 4.652038333074641,
-          "compared_to_average": 0.8143017754714483
+          "compared_to_average": 0.584129654925742
         },
         "changeup_velocity": {
           "trend": -0.4362057592308284,
-          "compared_to_average": 1.2477672733517868
+          "compared_to_average": 0.9989177809995617
         },
         "slider_vertical": {
           "trend": 5.492883573957638,
-          "compared_to_average": 1.4429959155473833
+          "compared_to_average": 1.221821185711336
         },
         "slider_velocity": {
           "trend": 0.0,
@@ -538,39 +538,39 @@
       "trends": {
         "o_swing": {
           "trend": 0.007946817647059073,
-          "compared_to_average": 1.1555026208528663
+          "compared_to_average": 0.8536488414762309
         },
         "o_contact": {
           "trend": -0.9270289235294105,
-          "compared_to_average": 1.3354158619270258
+          "compared_to_average": 1.1273180039320052
         },
         "z_swing": {
           "trend": -0.724347780882354,
-          "compared_to_average": 1.261421009625402
+          "compared_to_average": 1.0262670424320461
         },
         "z_contact": {
           "trend": -0.07092424558823335,
-          "compared_to_average": 1.2844993166413698
+          "compared_to_average": 1.018746437567148
         },
         "pi_zone": {
           "trend": -0.14167042794117626,
-          "compared_to_average": 1.298732299177351
+          "compared_to_average": 1.028355164313987
         },
         "innings": {
           "trend": -12.779411764705866,
-          "compared_to_average": 1.3367217280813215
+          "compared_to_average": 0.9809402795425667
         },
         "fastball_velocity": {
           "trend": 6.60319362352961,
-          "compared_to_average": 1.2434364129858213
+          "compared_to_average": 0.9938801136023531
         },
         "fastball_vertical": {
           "trend": -3.461810303933957,
-          "compared_to_average": 1.2797507442183342
+          "compared_to_average": 1.0212292872084094
         },
         "sinker_vertical": {
           "trend": -3.8993919433168345,
-          "compared_to_average": 1.3778558664173322
+          "compared_to_average": 1.076778208056902
         },
         "changeup_vertical": {
           "trend": 0.4716450360153484,
@@ -582,11 +582,11 @@
         },
         "slider_vertical": {
           "trend": 2.004123659033736,
-          "compared_to_average": 1.41834034272632
+          "compared_to_average": 1.2603875934958955
         },
         "slider_velocity": {
           "trend": 1.9056649794119345,
-          "compared_to_average": 1.248806071359606
+          "compared_to_average": 0.9980936556103941
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -594,7 +594,7 @@
         },
         "cutter_velocity": {
           "trend": 28.879903705882555,
-          "compared_to_average": 1.2231937659118557
+          "compared_to_average": 0.9779980390464013
         }
       }
     }
@@ -610,51 +610,51 @@
       "trends": {
         "o_swing": {
           "trend": -0.6691948220588231,
-          "compared_to_average": 1.4031872875394453
+          "compared_to_average": 1.0679337607998252
         },
         "o_contact": {
           "trend": -0.2881752632352936,
-          "compared_to_average": 1.210926159861483
+          "compared_to_average": 0.9860714792224048
         },
         "z_swing": {
           "trend": 0.24029248529411923,
-          "compared_to_average": 1.2326899565149918
+          "compared_to_average": 0.9960100307356126
         },
         "z_contact": {
           "trend": -0.7417195970588221,
-          "compared_to_average": 1.340267902248421
+          "compared_to_average": 1.0635377176613705
         },
         "pi_zone": {
           "trend": -0.30669656764705666,
-          "compared_to_average": 1.3231261575965134
+          "compared_to_average": 1.086730508989022
         },
         "innings": {
           "trend": -13.191176470588232,
-          "compared_to_average": 1.5712230215827336
+          "compared_to_average": 1.2776978417266187
         },
         "fastball_velocity": {
           "trend": 1.8598353058825747,
-          "compared_to_average": 1.247183537057132
+          "compared_to_average": 1.0005587054655753
         },
         "fastball_vertical": {
           "trend": 2.4287668756873475,
-          "compared_to_average": 1.2286183389468568
+          "compared_to_average": 0.9724722832045002
         },
         "changeup_vertical": {
           "trend": 17.767066394704866,
-          "compared_to_average": 0.5861882525490215
+          "compared_to_average": 0.3688379459221053
         },
         "changeup_velocity": {
           "trend": 1.0643948147057962,
-          "compared_to_average": 1.2458975569211643
+          "compared_to_average": 1.0010994104348105
         },
         "slider_vertical": {
           "trend": -30.50758210707627,
-          "compared_to_average": 3.215460145873565
+          "compared_to_average": 2.385838649897422
         },
         "slider_velocity": {
           "trend": -400.68827658088225,
-          "compared_to_average": 1.5583653419831625
+          "compared_to_average": 1.2510151529387297
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -678,43 +678,43 @@
       "trends": {
         "o_swing": {
           "trend": -0.03540555692307655,
-          "compared_to_average": 1.2181494560816635
+          "compared_to_average": 0.9442602589806961
         },
         "o_contact": {
           "trend": -0.06767853076923219,
-          "compared_to_average": 1.2635431115611788
+          "compared_to_average": 0.9743615065814057
         },
         "z_swing": {
           "trend": -0.22301850000000034,
-          "compared_to_average": 1.3320284554665514
+          "compared_to_average": 1.0467261111883932
         },
         "z_contact": {
           "trend": 0.1200626446153849,
-          "compared_to_average": 1.2301387055117075
+          "compared_to_average": 0.9721640799951435
         },
         "pi_zone": {
           "trend": -0.14688432384615505,
-          "compared_to_average": 1.2858975865367614
+          "compared_to_average": 0.9922036875535711
         },
         "innings": {
           "trend": -6.584615384615377,
-          "compared_to_average": 1.3060410334346506
+          "compared_to_average": 1.0210866261398177
         },
         "fastball_velocity": {
           "trend": -1.1639985815385412,
-          "compared_to_average": 1.2436356708124199
+          "compared_to_average": 0.996360399465257
         },
         "fastball_vertical": {
           "trend": -2.590438288080672,
-          "compared_to_average": 1.2855884308689234
+          "compared_to_average": 1.0130969342268423
         },
         "changeup_vertical": {
           "trend": -7.990190945836123,
-          "compared_to_average": 1.4367549079130113
+          "compared_to_average": 1.1171561300399826
         },
         "changeup_velocity": {
           "trend": -12.132668070769322,
-          "compared_to_average": 1.2604093968341756
+          "compared_to_average": 1.009880239376758
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -738,43 +738,43 @@
       "trends": {
         "o_swing": {
           "trend": 0.12085475945793314,
-          "compared_to_average": 1.231308723972051
+          "compared_to_average": 0.9303807535523922
         },
         "o_contact": {
           "trend": -1.005139724449464,
-          "compared_to_average": 1.5269386714202036
+          "compared_to_average": 1.2565148276927054
         },
         "z_swing": {
           "trend": 0.0018706888763410018,
-          "compared_to_average": 1.2318848052255311
+          "compared_to_average": 0.9609610788203016
         },
         "z_contact": {
           "trend": -0.13223068040654834,
-          "compared_to_average": 1.2357811583427718
+          "compared_to_average": 1.0020995542729023
         },
         "pi_zone": {
           "trend": -0.23546266516092487,
-          "compared_to_average": 1.3239624530843237
+          "compared_to_average": 1.0819741929912388
         },
         "innings": {
           "trend": -0.6775832862789313,
-          "compared_to_average": 1.2411048689138577
+          "compared_to_average": 0.9836142322097379
         },
         "fastball_velocity": {
           "trend": 4.02449460135522,
-          "compared_to_average": 1.2427181994753882
+          "compared_to_average": 0.9907838751703947
         },
         "fastball_vertical": {
           "trend": 2.971506479091369,
-          "compared_to_average": 1.2537774053829809
+          "compared_to_average": 0.9906946219661275
         },
         "slider_vertical": {
           "trend": 0.3499534056190902,
-          "compared_to_average": 1.0748462442854183
+          "compared_to_average": 0.8701582827250667
         },
         "slider_velocity": {
           "trend": 1.9240947447771162,
-          "compared_to_average": 1.243225991524153
+          "compared_to_average": 0.9924883119616118
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -786,7 +786,7 @@
         },
         "splitter_vertical": {
           "trend": -2.560291434255222,
-          "compared_to_average": 1.4595195467761803
+          "compared_to_average": 1.1724416998276006
         },
         "splitter_velocity": {
           "trend": 0.0,
@@ -878,55 +878,55 @@
       "trends": {
         "o_swing": {
           "trend": -2.8992473714285754,
-          "compared_to_average": 1.2899398990914954
+          "compared_to_average": 1.0986351616026109
         },
         "o_contact": {
           "trend": 5.609771257142853,
-          "compared_to_average": 1.2185319190438249
+          "compared_to_average": 0.9498578432329708
         },
         "z_swing": {
           "trend": 0.6440090285714238,
-          "compared_to_average": 1.246436712856372
+          "compared_to_average": 0.9716777326785866
         },
         "z_contact": {
           "trend": 3.198710971428563,
-          "compared_to_average": 1.2317693653695816
+          "compared_to_average": 0.9769502615151128
         },
         "pi_zone": {
           "trend": -2.5205690571428683,
-          "compared_to_average": 1.2693627491412154
+          "compared_to_average": 1.0348190415769634
         },
         "innings": {
           "trend": 17.999999999999968,
-          "compared_to_average": 1.2183098591549295
+          "compared_to_average": 0.9366197183098591
         },
         "fastball_velocity": {
           "trend": -0.10198557142989866,
-          "compared_to_average": 1.2494715421591327
+          "compared_to_average": 0.9995751515427721
         },
         "fastball_vertical": {
           "trend": -21.434117105438578,
-          "compared_to_average": 1.2596600824957205
+          "compared_to_average": 1.0156093156214676
         },
         "sinker_vertical": {
           "trend": -49.63217417353033,
-          "compared_to_average": 1.4449522234688295
+          "compared_to_average": 1.3984851000365777
         },
         "changeup_vertical": {
           "trend": -6.096266088031608,
-          "compared_to_average": 1.25843724257588
+          "compared_to_average": 1.0666756304236527
         },
         "changeup_velocity": {
           "trend": 4.559523799999054,
-          "compared_to_average": 1.2500568765723434
+          "compared_to_average": 1.0004667801551779
         },
         "slider_vertical": {
           "trend": -30.110777075065776,
-          "compared_to_average": 1.3054165362058643
+          "compared_to_average": 0.7884271107567422
         },
         "slider_velocity": {
           "trend": -40.16897380000047,
-          "compared_to_average": 1.251787814084505
+          "compared_to_average": 1.0028609033638374
         }
       }
     }
@@ -942,35 +942,35 @@
       "trends": {
         "o_swing": {
           "trend": 0.6500561824175827,
-          "compared_to_average": 1.2029267120014882
+          "compared_to_average": 0.9151896140921878
         },
         "o_contact": {
           "trend": -1.6225277010989025,
-          "compared_to_average": 1.4239198295098794
+          "compared_to_average": 1.0913876535967784
         },
         "z_swing": {
           "trend": -0.8461579780219781,
-          "compared_to_average": 1.3386514392061795
+          "compared_to_average": 1.0516468217323913
         },
         "z_contact": {
           "trend": -0.5834910065934052,
-          "compared_to_average": 1.3111905598559457
+          "compared_to_average": 1.0114166553302169
         },
         "pi_zone": {
           "trend": -1.0073895780219793,
-          "compared_to_average": 1.3504968410918348
+          "compared_to_average": 1.0392050574872642
         },
         "innings": {
           "trend": 14.1978021978022,
-          "compared_to_average": 1.0665236051502145
+          "compared_to_average": 0.9763948497854077
         },
         "fastball_velocity": {
           "trend": 20.892279874724913,
-          "compared_to_average": 1.233009644193487
+          "compared_to_average": 0.9868456597732177
         },
         "fastball_vertical": {
           "trend": 0.07667806454182377,
-          "compared_to_average": 1.2733176255804894
+          "compared_to_average": 1.019317950911112
         },
         "sinker_vertical": {
           "trend": 11.625240741900637,
@@ -978,11 +978,11 @@
         },
         "changeup_vertical": {
           "trend": -8.6976296561202,
-          "compared_to_average": 1.3223008473354336
+          "compared_to_average": 1.0425211696219332
         },
         "changeup_velocity": {
           "trend": 20.47372164835163,
-          "compared_to_average": 1.2272354608612537
+          "compared_to_average": 0.9840887110171921
         },
         "cutter_vertical": {
           "trend": 0.0,
@@ -990,7 +990,7 @@
         },
         "cutter_velocity": {
           "trend": 21.31067212307651,
-          "compared_to_average": 1.2352384235143787
+          "compared_to_average": 0.9916551413657754
         }
       }
     }
