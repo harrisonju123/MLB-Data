@@ -1,0 +1,18 @@
+{
+  "LAD": "MIA",
+  "MIA": "LAD",
+  "STL": "CIN",
+  "CIN": "STL",
+  "CHC": "TOR",
+  "TOR": "CHC",
+  "BOS": "MIN",
+  "MIN": "BOS",
+  "PIT": "MIL",
+  "MIL": "PIT",
+  "NYY": "LAA",
+  "LAA": "NYY",
+  "PHI": "ARI",
+  "ARI": "PHI",
+  "SDP": "SFG",
+  "SFG": "SDP"
+}

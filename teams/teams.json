@@ -1,0 +1,302 @@
+[
+  {
+    "teamid": 28,
+    "shortName": "Cardinals",
+    "AbbName": "STL",
+    "League": "NL",
+    "Division": "C",
+    "W": 74,
+    "L": 54,
+    "GB": 0.0
+  },
+  {
+    "teamid": 5,
+    "shortName": "Guardians",
+    "AbbName": "CLE",
+    "League": "AL",
+    "Division": "C",
+    "W": 67,
+    "L": 59,
+    "GB": 0.0
+  },
+  {
+    "teamid": 9,
+    "shortName": "Yankees",
+    "AbbName": "NYY",
+    "League": "AL",
+    "Division": "E",
+    "W": 78,
+    "L": 50,
+    "GB": 0.0
+  },
+  {
+    "teamid": 22,
+    "shortName": "Dodgers",
+    "AbbName": "LAD",
+    "League": "NL",
+    "Division": "W",
+    "W": 88,
+    "L": 38,
+    "GB": 0.0
+  },
+  {
+    "teamid": 21,
+    "shortName": "Astros",
+    "AbbName": "HOU",
+    "League": "AL",
+    "Division": "W",
+    "W": 82,
+    "L": 47,
+    "GB": 0.0
+  },
+  {
+    "teamid": 25,
+    "shortName": "Mets",
+    "AbbName": "NYM",
+    "League": "NL",
+    "Division": "E",
+    "W": 82,
+    "L": 47,
+    "GB": 0.0
+  },
+  {
+    "teamid": 8,
+    "shortName": "Twins",
+    "AbbName": "MIN",
+    "League": "AL",
+    "Division": "C",
+    "W": 65,
+    "L": 61,
+    "GB": 2.0
+  },
+  {
+    "teamid": 16,
+    "shortName": "Braves",
+    "AbbName": "ATL",
+    "League": "NL",
+    "Division": "E",
+    "W": 79,
+    "L": 50,
+    "GB": 3.0
+  },
+  {
+    "teamid": 4,
+    "shortName": "White Sox",
+    "AbbName": "CHW",
+    "League": "AL",
+    "Division": "C",
+    "W": 63,
+    "L": 65,
+    "GB": 5.0
+  },
+  {
+    "teamid": 23,
+    "shortName": "Brewers",
+    "AbbName": "MIL",
+    "League": "NL",
+    "Division": "C",
+    "W": 67,
+    "L": 59,
+    "GB": 6.0
+  },
+  {
+    "teamid": 12,
+    "shortName": "Rays",
+    "AbbName": "TBR",
+    "League": "AL",
+    "Division": "E",
+    "W": 70,
+    "L": 57,
+    "GB": 7.5
+  },
+  {
+    "teamid": 14,
+    "shortName": "Blue Jays",
+    "AbbName": "TOR",
+    "League": "AL",
+    "Division": "E",
+    "W": 68,
+    "L": 58,
+    "GB": 9.0
+  },
+  {
+    "teamid": 26,
+    "shortName": "Phillies",
+    "AbbName": "PHI",
+    "League": "NL",
+    "Division": "E",
+    "W": 72,
+    "L": 56,
+    "GB": 9.5
+  },
+  {
+    "teamid": 2,
+    "shortName": "Orioles",
+    "AbbName": "BAL",
+    "League": "AL",
+    "Division": "E",
+    "W": 67,
+    "L": 60,
+    "GB": 10.5
+  },
+  {
+    "teamid": 11,
+    "shortName": "Mariners",
+    "AbbName": "SEA",
+    "League": "AL",
+    "Division": "W",
+    "W": 70,
+    "L": 58,
+    "GB": 11.5
+  },
+  {
+    "teamid": 3,
+    "shortName": "Red Sox",
+    "AbbName": "BOS",
+    "League": "AL",
+    "Division": "E",
+    "W": 62,
+    "L": 66,
+    "GB": 16.0
+  },
+  {
+    "teamid": 7,
+    "shortName": "Royals",
+    "AbbName": "KCR",
+    "League": "AL",
+    "Division": "C",
+    "W": 52,
+    "L": 77,
+    "GB": 16.5
+  },
+  {
+    "teamid": 6,
+    "shortName": "Tigers",
+    "AbbName": "DET",
+    "League": "AL",
+    "Division": "C",
+    "W": 50,
+    "L": 78,
+    "GB": 18.0
+  },
+  {
+    "teamid": 17,
+    "shortName": "Cubs",
+    "AbbName": "CHC",
+    "League": "NL",
+    "Division": "C",
+    "W": 55,
+    "L": 73,
+    "GB": 19.0
+  },
+  {
+    "teamid": 29,
+    "shortName": "Padres",
+    "AbbName": "SDP",
+    "League": "NL",
+    "Division": "W",
+    "W": 70,
+    "L": 59,
+    "GB": 19.5
+  },
+  {
+    "teamid": 18,
+    "shortName": "Reds",
+    "AbbName": "CIN",
+    "League": "NL",
+    "Division": "C",
+    "W": 50,
+    "L": 76,
+    "GB": 23.0
+  },
+  {
+    "teamid": 13,
+    "shortName": "Rangers",
+    "AbbName": "TEX",
+    "League": "AL",
+    "Division": "W",
+    "W": 58,
+    "L": 69,
+    "GB": 23.0
+  },
+  {
+    "teamid": 27,
+    "shortName": "Pirates",
+    "AbbName": "PIT",
+    "League": "NL",
+    "Division": "C",
+    "W": 48,
+    "L": 79,
+    "GB": 25.5
+  },
+  {
+    "teamid": 20,
+    "shortName": "Marlins",
+    "AbbName": "MIA",
+    "League": "NL",
+    "Division": "E",
+    "W": 55,
+    "L": 72,
+    "GB": 26.0
+  },
+  {
+    "teamid": 1,
+    "shortName": "Angels",
+    "AbbName": "LAA",
+    "League": "AL",
+    "Division": "W",
+    "W": 55,
+    "L": 73,
+    "GB": 26.5
+  },
+  {
+    "teamid": 30,
+    "shortName": "Giants",
+    "AbbName": "SFG",
+    "League": "NL",
+    "Division": "W",
+    "W": 61,
+    "L": 65,
+    "GB": 27.0
+  },
+  {
+    "teamid": 15,
+    "shortName": "Diamondbacks",
+    "AbbName": "ARI",
+    "League": "NL",
+    "Division": "W",
+    "W": 59,
+    "L": 67,
+    "GB": 29.0
+  },
+  {
+    "teamid": 10,
+    "shortName": "Athletics",
+    "AbbName": "OAK",
+    "League": "AL",
+    "Division": "W",
+    "W": 48,
+    "L": 81,
+    "GB": 34.0
+  },
+  {
+    "teamid": 19,
+    "shortName": "Rockies",
+    "AbbName": "COL",
+    "League": "NL",
+    "Division": "W",
+    "W": 55,
+    "L": 74,
+    "GB": 34.5
+  },
+  {
+    "teamid": 24,
+    "shortName": "Nationals",
+    "AbbName": "WSN",
+    "League": "NL",
+    "Division": "E",
+    "W": 43,
+    "L": 85,
+    "GB": 38.5
+  }
+]
