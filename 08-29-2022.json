@@ -464,6 +464,70 @@
     }
   },
   {
+    "José Berríos": {
+      "general": {
+        "siera": "below average",
+        "x_fip": "below average",
+        "ip": 5.367999999999999,
+        "k_rate": 0.911111111111111
+      },
+      "trends": {
+        "o_swing": {
+          "trend": -0.38282346692307706,
+          "compared_to_average": 1.2719923779258746
+        },
+        "o_contact": {
+          "trend": 0.11713880923076786,
+          "compared_to_average": 1.2836508122420838
+        },
+        "z_swing": {
+          "trend": 0.1537369269230767,
+          "compared_to_average": 1.199428549855411
+        },
+        "z_contact": {
+          "trend": 0.39794518846153637,
+          "compared_to_average": 1.142237004447772
+        },
+        "pi_zone": {
+          "trend": 0.212335081538462,
+          "compared_to_average": 1.2403448993227553
+        },
+        "innings": {
+          "trend": -3.6076923076923126,
+          "compared_to_average": 1.2624330527926548
+        },
+        "fastball_velocity": {
+          "trend": -1.20387071769215,
+          "compared_to_average": 1.2535790716169781
+        },
+        "fastball_vertical": {
+          "trend": 2.001241182392014,
+          "compared_to_average": 1.251088295054559
+        },
+        "sinker_vertical": {
+          "trend": 2.871378306956783,
+          "compared_to_average": 1.197550748987228
+        },
+        "changeup_vertical": {
+          "trend": 4.652038333074641,
+          "compared_to_average": 0.8143017754714483
+        },
+        "changeup_velocity": {
+          "trend": -0.4362057592308284,
+          "compared_to_average": 1.2477672733517868
+        },
+        "slider_vertical": {
+          "trend": 5.492883573957638,
+          "compared_to_average": 1.4429959155473833
+        },
+        "slider_velocity": {
+          "trend": 0.0,
+          "compared_to_average": 0
+        }
+      }
+    }
+  },
+  {
     "Mike Clevinger": {
       "general": {
         "siera": "poor",

@@ -509,7 +509,7 @@ def slider_velocity_trend(game_stats):
 
     return {
         "trend": z[0] * 100,
-        "compared_to_average": average_trend / average_stat
+        "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
     }
 
 
