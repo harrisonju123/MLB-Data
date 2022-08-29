@@ -133,7 +133,7 @@ def o_swing_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend_o_swing / average_o_swing
     }
 
@@ -161,7 +161,7 @@ def o_contact_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -189,7 +189,7 @@ def z_swing_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -217,7 +217,7 @@ def z_contact_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -245,7 +245,7 @@ def pitch_zones_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -273,7 +273,7 @@ def innings_trends(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -302,7 +302,7 @@ def fastball_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -330,7 +330,7 @@ def fastball_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -359,7 +359,7 @@ def sinker_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -388,7 +388,7 @@ def changeup_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -416,7 +416,7 @@ def changeup_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -445,7 +445,7 @@ def slider_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -473,7 +473,7 @@ def slider_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -501,7 +501,7 @@ def curveball_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -529,9 +529,10 @@ def curveball_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
+
 
 def cutter_vertical_trend(game_stats):
     stat_list = []
@@ -556,7 +557,7 @@ def cutter_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -584,7 +585,7 @@ def cutter_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -612,7 +613,7 @@ def splitter_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -640,7 +641,7 @@ def splitter_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
     }
 
@@ -668,7 +669,7 @@ def knuckball_velocity_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
 
@@ -696,9 +697,10 @@ def knuckleball_vertical_trend(game_stats):
     print("{0}x + {1}".format(*z))
 
     return {
-        "trend": z[0],
+        "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
     }
+
 
 def calculate_siera(siera):
     # SIERA -
