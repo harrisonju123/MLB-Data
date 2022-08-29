@@ -62,7 +62,55 @@ def scrape_pitcher_data(teams, today_date):
         # # team trends
         # trends = calculate_teams.calculate_trends(self, opposing_team_stats)
 
+        higher_is_good = ["o_swing", "pi_zone", "innings", "fastball_velocity", "fastball_vertical", "slider_vertical",
+                          "slider_velocity", "splitter_vertical", "changeup_vertical"]
+        lower_is_good = ["o_contact", "z_swing", "z_contact"]
+
         # let's take the data and actually compile some sense with it
+        pitcher_score = 0
+        for trend in pitcher_trends:
+            comp_to_avg = pitcher_trends[trend].get("compared_to_average", 0)
+            if comp_to_avg != 0:
+                if comp_to_avg >= 1.1 and trend in higher_is_good:
+                    if trend == "fastball_vertical":
+                        if pitcher_trends[trend].get("trend", 0) < 0:
+                            pitcher_score += 0.5
+                    else:
+                        pitcher_score += 0.5
+                elif comp_to_avg <= 0.9 and trend in lower_is_good:
+                    pitcher_score += 0.5
+
+        if general_pitcher_status["siera"] == "excellent":
+            pitcher_score += 2
+        elif general_pitcher_status["siera"] == "great":
+            pitcher_score += 2
+        elif general_pitcher_status["siera"] == "above average":
+            pitcher_score += 1
+        elif general_pitcher_status["siera"] == "below average":
+            pitcher_score -= 1
+        elif general_pitcher_status["siera"] == "poor":
+            pitcher_score -= 2
+        elif general_pitcher_status["siera"] == "awful":
+            pitcher_score -= 3
+        elif general_pitcher_status["siera"] == "worst":
+            pitcher_score -= 4
+
+        if general_pitcher_status["x_fip"] == "excellent":
+            pitcher_score += 2
+        elif general_pitcher_status["x_fip"] == "great":
+            pitcher_score += 2
+        elif general_pitcher_status["x_fip"] == "above average":
+            pitcher_score += 1
+        elif general_pitcher_status["x_fip"] == "below average":
+            pitcher_score -= 1
+        elif general_pitcher_status["x_fip"] == "poor":
+            pitcher_score -= 2
+        elif general_pitcher_status["x_fip"] == "awful":
+            pitcher_score -= 3
+        elif general_pitcher_status["x_fip"] == "worst":
+            pitcher_score -= 4
+
+        general_pitcher_status["score"] = pitcher_score
 
         slate_player_stats.append({
             player_info["firstLastName"]: {
@@ -75,7 +123,6 @@ def scrape_pitcher_data(teams, today_date):
     game_file_name = today_date + '.json'
     with open(game_file_name, "w") as outfile:
         outfile.write(final)
-
 
 
 # generates a dictionary where the key is team id and value is team abbreviation
