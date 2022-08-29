@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def calculate_general(player_stat):
     overall_pitcher_stats = player_stat["year_stats"]
 
@@ -13,10 +16,689 @@ def calculate_general(player_stat):
     return player_summary
 
 
+# What trends do we need to know about a pitcher?
+# Pitcher's SIERA trends last 10 games vs overall
+# pitcher's xFIP trends last 10 games
+#
 def calculate_trends(player_stat):
-    trends = {}
+    overall_pitcher_stats = player_stat["year_stats"]
+    game_stats = player_stat["game_stats"]
+    o_swing_trend = o_swing_trends(game_stats)
+    o_contact_trend = o_contact_trends(game_stats)
+    z_swing_trend = z_swing_trends(game_stats)
+    z_contact = z_contact_trends(game_stats)
+    pi_zone = pitch_zones_trends(game_stats)
+    ip = innings_trends(game_stats)
+    fa_vertical = 0.0000
+    fa_velocity = 0.0000
+    if game_stats[0]["piFA-Z"] is not None and game_stats[0]["piFA-Z"] > 0:
+        fa_vertical = fastball_vertical_trend(game_stats)
+        fa_velocity = fastball_velocity_trend(game_stats)
+
+    sinker_vertical = 0.0000
+    if game_stats[0].get("piSI-Z", 0) > 0:
+        sinker_vertical = sinker_vertical_trend(game_stats)
+
+    changeup_vertical = 0.0000
+    changeup_velocity = 0.0000
+    if game_stats[0].get("piCH-Z", 0) > 0:
+        changeup_vertical = changeup_vertical_trend(game_stats)
+        changeup_velocity = changeup_velocity_trend(game_stats)
+
+    slider_vertical = 0.0000
+    slider_velocity = 0.0000
+    if game_stats[0].get("piSL-Z", 0) > 0:
+        slider_vertical = slider_vertical_trend(game_stats)
+        slider_velocity = slider_velocity_trend(game_stats)
+
+    cutter_vertical = 0.0000
+    cutter_velocity = 0.0000
+    if game_stats[0].get("piCU-Z", 0) > 0:
+        cutter_vertical = cutter_vertical_trend(game_stats)
+        cutter_velocity = cutter_velocity_trend(game_stats)
+
+    splitter_vertical = 0.0000
+    splitter_velocity = 0.0000
+    if game_stats[0].get("piFS-Z", 0) > 0:
+        splitter_vertical = splitter_vertical_trend(game_stats)
+        splitter_velocity = splitter_velocity_trend(game_stats)
+
+    knuckleball_vertical = 0.0000
+    knuckleball_velocity = 0.0000
+    if game_stats[0].get("piKN-Z", 0) > 0:
+        knuckleball_vertical = knuckleball_vertical_trend(game_stats)
+        knuckleball_velocity = knuckball_velocity_trend(game_stats)
+
+    pitcher_trends = {}
+    pitcher_trends["o_swing"] = o_swing_trend
+    pitcher_trends["o_contact"] = o_contact_trend
+    pitcher_trends["z_swing"] = z_swing_trend
+    pitcher_trends["z_contact"] = z_contact
+    pitcher_trends["pi_zone"] = pi_zone
+    pitcher_trends["innings"] = ip
+    if fa_velocity != 0:
+        pitcher_trends["fastball_velocity"] = fa_velocity
+        pitcher_trends["fastball_vertical"] = fa_vertical
+
+    if sinker_vertical != 0:
+        pitcher_trends["sinker_vertical"] = sinker_vertical
+
+    if changeup_vertical != 0:
+        pitcher_trends["changeup_vertical"] = changeup_vertical
+        pitcher_trends["changeup_velocity"] = changeup_velocity
+
+    if slider_vertical != 0:
+        pitcher_trends["slider_vertical"] = slider_vertical
+        pitcher_trends["slider_velocity"] = slider_velocity
+
+    if cutter_vertical != 0:
+        pitcher_trends["cutter_vertical"] = cutter_vertical
+        pitcher_trends["cutter_velocity"] = cutter_velocity
+
+    if splitter_vertical != 0:
+        pitcher_trends["splitter_vertical"] = splitter_vertical
+        pitcher_trends["splitter_velocity"] = splitter_velocity
+
+    if knuckleball_vertical != 0:
+        pitcher_trends["knuckleball_vertical"] = knuckleball_vertical
+        pitcher_trends["knuckleball_velocity"] = knuckleball_velocity
+
+    return pitcher_trends
 
 
+# check swings outside the strike zone
+# look for trends
+# First get the o-swing data in a list
+# Arrange using numpy and use the built-in polyfit
+def o_swing_trends(game_stats):
+    o_swings = []
+    average_o_swing = 0.0000
+    total_o_swing = 0.0000
+    trend_o_swing = 0.0000
+
+    for i, game in enumerate(game_stats):
+        o_swing = game["O-Swing%"]
+        # go over just the first 4
+        if i <= 4:
+            trend_o_swing += o_swing
+        total_o_swing += o_swing
+        o_swings.append(o_swing)
+
+    average_o_swing = total_o_swing / len(o_swings)
+    average_trend_o_swing = trend_o_swing / 4
+
+    x = np.arange(0, len(o_swings))
+    y = np.array(o_swings)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend_o_swing / average_o_swing
+    }
+
+
+def o_contact_trends(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game["O-Contact%"]
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def z_swing_trends(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game["Z-Swing%"]
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def z_contact_trends(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game["Z-Contact%"]
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def pitch_zones_trends(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game["piZone%"]
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def innings_trends(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game["IP"]
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+# less is better
+def fastball_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piFA-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def fastball_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("FBv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+# more is better
+def sinker_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piSI-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+# more is better
+def changeup_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piCH-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def changeup_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("CHv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+# more is better
+def slider_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piSL-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def slider_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("SLv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def curveball_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piCU-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def curveball_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("CBv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+def cutter_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piFC-Z%", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def cutter_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("CTv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def splitter_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piFS-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def splitter_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("SFv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
+    }
+
+
+def knuckball_velocity_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("KNv", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
+
+
+def knuckleball_vertical_trend(game_stats):
+    stat_list = []
+    average = 0.0000
+    total = 0.0000
+    trend = 0.0000
+
+    for i, game in enumerate(game_stats):
+        stat = game.get("piKN-Z", 0)
+        # go over just the first 4
+        if i <= 4:
+            trend += stat
+        total += stat
+        stat_list.append(stat)
+
+    average_stat = total / len(stat_list)
+    average_trend = trend / 4
+
+    x = np.arange(0, len(stat_list))
+    y = np.array(stat_list)
+    z = np.polyfit(x, y, 1)
+    print("{0}x + {1}".format(*z))
+
+    return {
+        "trend": z[0],
+        "compared_to_average": average_trend / average_stat
+    }
 
 def calculate_siera(siera):
     # SIERA -

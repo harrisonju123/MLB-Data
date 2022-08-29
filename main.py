@@ -65,7 +65,10 @@ def scrape_pitcher_data(teams, today_date):
         # let's take the data and actually compile some sense with it
 
         slate_player_stats.append({
-            player_info["firstLastName"]: general_pitcher_status
+            player_info["firstLastName"]: {
+                "general": general_pitcher_status,
+                "trends": pitcher_trends
+            }
         })
 
     final = json.dumps(slate_player_stats)
