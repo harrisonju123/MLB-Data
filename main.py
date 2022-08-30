@@ -81,7 +81,7 @@ def scrape_pitcher_data(teams, today_date):
                     pitcher_score += 0.5
 
         if general_pitcher_status["siera"] == "excellent":
-            pitcher_score += 2
+            pitcher_score += 3
         elif general_pitcher_status["siera"] == "great":
             pitcher_score += 2
         elif general_pitcher_status["siera"] == "above average":
@@ -96,7 +96,7 @@ def scrape_pitcher_data(teams, today_date):
             pitcher_score -= 4
 
         if general_pitcher_status["x_fip"] == "excellent":
-            pitcher_score += 2
+            pitcher_score += 3
         elif general_pitcher_status["x_fip"] == "great":
             pitcher_score += 2
         elif general_pitcher_status["x_fip"] == "above average":
