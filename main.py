@@ -3,6 +3,7 @@ import json
 import scraper
 from calculate import pitchers as calculate_pitchers
 from calculate import teams as calculate_teams
+import csv
 
 
 def main():
@@ -111,18 +112,47 @@ def scrape_pitcher_data(teams, today_date):
             pitcher_score -= 4
 
         general_pitcher_status["score"] = pitcher_score
+        try:
+            recent_k_average = pitcher_trends["strikeouts"]["recent_average"]
+            below_average_count = pitcher_trends["strikeouts"]["below_average_count"]
+            overall_k_average = pitcher_trends["strikeouts"]["overall_average"]
+            siera = general_pitcher_status["siera"]
+            x_fip = general_pitcher_status["x_fip"]
+            ip = general_pitcher_status["ip"]
+            k_rate = general_pitcher_status["k_rate"]
+        except Exception as e:
+            recent_k_average = 0
+            below_average_count = 0
+            overall_k_average = 0
+            siera = 0
+            x_fip = 0
+            ip = 0
+            k_rate = 0
 
         slate_player_stats.append({
-            player_info["firstLastName"]: {
-                "general": general_pitcher_status,
-                "trends": pitcher_trends
-            }
-        })
+            "player": player_info["firstLastName"],
+            "siera": siera,
+            "x_fip": x_fip,
+            "ip": ip,
+            "k_rate": k_rate,
+            "score": pitcher_score,
+            "recent_k_average": recent_k_average,
+            "below_average_count": below_average_count,
+            "overall_k_average": overall_k_average
+        }
+        )
 
-    final = json.dumps(slate_player_stats)
+    headers = ["player", "siera", "x_fip", "ip", "score", "recent_k_average", "below_average_count", "overall_k_average"]
     game_file_name = today_date + '.json'
-    with open(game_file_name, "w") as outfile:
-        outfile.write(final)
+    f = open(game_file_name, 'w')
+    writer = csv.writer(f)
+    writer.writerow(headers)
+    for player in slate_player_stats:
+        row = []
+        for header in headers:
+            row.append(player.get(header, 0))
+        writer.writerow(row)
+    f.close()
 
 
 # generates a dictionary where the key is team id and value is team abbreviation

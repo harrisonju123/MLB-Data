@@ -29,6 +29,7 @@ def calculate_trends(player_stat):
     z_contact = z_contact_trends(game_stats)
     pi_zone = pitch_zones_trends(game_stats)
     ip = innings_trends(game_stats)
+    k_rate = strikeout_trends(game_stats)
     fa_vertical = 0.0000
     fa_velocity = 0.0000
     if game_stats[0]["piFA-Z"] is not None and game_stats[0]["piFA-Z"] > 0:
@@ -70,6 +71,7 @@ def calculate_trends(player_stat):
         knuckleball_velocity = knuckball_velocity_trend(game_stats)
 
     pitcher_trends = {}
+    pitcher_trends["strikeouts"] = k_rate
     pitcher_trends["o_swing"] = o_swing_trend
     pitcher_trends["o_contact"] = o_contact_trend
     pitcher_trends["z_swing"] = z_swing_trend
@@ -104,6 +106,38 @@ def calculate_trends(player_stat):
         pitcher_trends["knuckleball_velocity"] = knuckleball_velocity
 
     return pitcher_trends
+
+
+# we also want to see pitcher strikeout trends
+# check for last 10 game strikeouts and how many were below average
+# also returns last 10 game average as well as overall average.
+def strikeout_trends(game_stats):
+    ks = []
+    total_k = 0
+    recent_k = 0
+    for i, game in enumerate(game_stats):
+        strikeout = game["SO"]
+        total_k += strikeout
+
+    average = total_k / len(game_stats)
+    below_average = 0
+    for i, game in enumerate(game_stats):
+        strikeout = game["SO"]
+        if i <= 9:
+            if strikeout < average:
+                below_average += 1
+            recent_k += strikeout
+
+    recent_average = recent_k / 10
+
+    return {
+        "recent_average": recent_average,
+        "below_average_count": below_average,
+        "overall_average": average
+    }
+
+
+
 
 
 # check swings outside the strike zone
