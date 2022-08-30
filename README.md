@@ -9,9 +9,12 @@ git clone https://github.com/harrisonju123/MLB-Data.git
 ```
 
 2. To generate data, all you have to do is run main.py. 
-  a. This can be done via IDE or in your terminal by typing:
-  `python main.py` once you're inside the directory
-  
+3. You will need to first activate virtual environment
+4. You can do this by running `python3 -m venv <name_of_virtualenv>`
+5. To activate the virtual environment, `source name_of_virtualenv/lib/activate`
+6. Install necessary libraries inside your venv, `pip install -r requirements.txt`
+7. If you don't have pip, you can google and it will be very easy to figure out, for some macs it might be called pip3
+8. Run now by typing `python main.py`. Same with pip, it might be under pip3
   
   
 Adding data to run daily
