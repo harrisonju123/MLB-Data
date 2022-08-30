@@ -15,7 +15,8 @@ git clone https://github.com/harrisonju123/MLB-Data.git
   
   
 Adding data to run daily
-1. There's a pattern of 'mm-dd-YYYY.json`
+
+1. There's a pattern of `mm-dd-YYYY.json`
   This is found in `/pitchers`, `/teams`, and inside the main directory.
 2. Inside `pitchers/mm-dd-YYYY.json`
   You want to use the same pattern as other json files.
