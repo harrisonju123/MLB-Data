@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 
 
@@ -21,6 +23,8 @@ def calculate_general(player_stat):
 # pitcher's xFIP trends last 10 games
 #
 def calculate_trends(player_stat):
+    if len(player_stat) < 2:
+        return
     overall_pitcher_stats = player_stat["year_stats"]
     game_stats = player_stat["game_stats"]
     o_swing_trend = o_swing_trends(game_stats)
@@ -32,9 +36,10 @@ def calculate_trends(player_stat):
     k_rate = strikeout_trends(game_stats)
     fa_vertical = 0.0000
     fa_velocity = 0.0000
-    if game_stats[0]["piFA-Z"] is not None and game_stats[0]["piFA-Z"] > 0:
-        fa_vertical = fastball_vertical_trend(game_stats)
-        fa_velocity = fastball_velocity_trend(game_stats)
+    if game_stats[0].get("piFA-Z", None) is not None:
+        if game_stats[0]["piFA-Z"] > 0:
+            fa_vertical = fastball_vertical_trend(game_stats)
+            fa_velocity = fastball_velocity_trend(game_stats)
 
     sinker_vertical = 0.0000
     if game_stats[0].get("piSI-Z", 0) != 0:
@@ -115,29 +120,39 @@ def strikeout_trends(game_stats):
     ks = []
     total_k = 0
     recent_k = 0
+    total_pitches = 0
     for i, game in enumerate(game_stats):
         strikeout = game["SO"]
+        pitches = game["Pitches"]
         total_k += strikeout
-
+        total_pitches += pitches
+    recent_pitch_count = 0
     average = total_k / len(game_stats)
     below_average = 0
+    worst_k = 99
     for i, game in enumerate(game_stats):
         strikeout = game["SO"]
+        pitches = game["Pitches"]
+        if worst_k > strikeout:
+            worst_k = strikeout
         if i <= 9:
-            if strikeout < average:
+            if strikeout < math.floor(average):
                 below_average += 1
             recent_k += strikeout
+            recent_pitch_count += pitches
 
+    total_pitch_average = total_pitches / len(game_stats)
     recent_average = recent_k / 10
+    recent_pitch_count_average = recent_pitch_count / 10
 
     return {
         "recent_average": recent_average,
         "below_average_count": below_average,
-        "overall_average": average
+        "overall_average": average,
+        "total_pitch_average": total_pitch_average,
+        "recent_pitch_count_average": recent_pitch_count_average,
+        "worst_k": worst_k
     }
-
-
-
 
 
 # check swings outside the strike zone
@@ -151,7 +166,7 @@ def o_swing_trends(game_stats):
     trend_o_swing = 0.0000
 
     for i, game in enumerate(game_stats):
-        o_swing = game["O-Swing%"]
+        o_swing = game.get("O-Swing%", 0)
         # go over just the first 4 i < 4
         if i < 4:
             trend_o_swing += o_swing
@@ -164,7 +179,7 @@ def o_swing_trends(game_stats):
     x = np.arange(0, len(o_swings))
     y = np.array(o_swings)
     z = []
-    try :
+    try:
         z = np.polyfit(x, y, 1)
     except Exception as e:
         z.append(0)
@@ -182,7 +197,7 @@ def o_contact_trends(game_stats):
     trend = 0.0000
 
     for i, game in enumerate(game_stats):
-        stat = game["O-Contact%"]
+        stat = game.get("O-Contact%", 0)
         # go over just the first 4
         if i < 4:
             trend += stat
@@ -200,7 +215,6 @@ def o_contact_trends(game_stats):
     except Exception as e:
         z.append(0)
 
-
     return {
         "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
@@ -214,7 +228,7 @@ def z_swing_trends(game_stats):
     trend = 0.0000
 
     for i, game in enumerate(game_stats):
-        stat = game["Z-Swing%"]
+        stat = game.get("Z-Swing%", 0)
         # go over just the first 4
         if i < 4:
             trend += stat
@@ -226,7 +240,7 @@ def z_swing_trends(game_stats):
 
     x = np.arange(0, len(stat_list))
     y = np.array(stat_list)
-    z =[]
+    z = []
     try:
         z = np.polyfit(x, y, 1)
     except Exception as e:
@@ -245,7 +259,7 @@ def z_contact_trends(game_stats):
     trend = 0.0000
 
     for i, game in enumerate(game_stats):
-        stat = game["Z-Contact%"]
+        stat = game.get("Z-Contact%", 0)
         # go over just the first 4
         if i < 4:
             trend += stat
@@ -263,7 +277,6 @@ def z_contact_trends(game_stats):
     except Exception as e:
         z.append(0)
 
-
     return {
         "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
@@ -277,7 +290,7 @@ def pitch_zones_trends(game_stats):
     trend = 0.0000
 
     for i, game in enumerate(game_stats):
-        stat = game["piZone%"]
+        stat = game.get("piZone%", 0)
         # go over just the first 4
         if i < 4:
             trend += stat
@@ -387,7 +400,6 @@ def fastball_velocity_trend(game_stats):
     else:
         z = [0]
 
-
     return {
         "trend": z[0] * 100,
         "compared_to_average": average_trend / average_stat
@@ -482,7 +494,7 @@ def changeup_velocity_trend(game_stats):
 
     return {
         "trend": z[0] * 100,
-        "compared_to_average": average_trend / average_stat
+        "compared_to_average": average_trend / average_stat if average_stat != 0 else 0
     }
 
 

@@ -120,6 +120,9 @@ def scrape_pitcher_data(teams, today_date):
             x_fip = general_pitcher_status["x_fip"]
             ip = general_pitcher_status["ip"]
             k_rate = general_pitcher_status["k_rate"]
+            total_pitch_average = pitcher_trends["strikeouts"]["total_pitch_average"]
+            recent_pitch_count_average = pitcher_trends["strikeouts"]["recent_pitch_count_average"]
+            worst_k = pitcher_trends["strikeouts"]["worst_k"]
         except Exception as e:
             recent_k_average = 0
             below_average_count = 0
@@ -128,6 +131,9 @@ def scrape_pitcher_data(teams, today_date):
             x_fip = 0
             ip = 0
             k_rate = 0
+            total_pitch_average = 0
+            recent_pitch_count_average = 0
+            worst_k = 0
 
         slate_player_stats.append({
             "player": player_info["firstLastName"],
@@ -138,12 +144,15 @@ def scrape_pitcher_data(teams, today_date):
             "score": pitcher_score,
             "recent_k_average": recent_k_average,
             "below_average_count": below_average_count,
-            "overall_k_average": overall_k_average
+            "overall_k_average": overall_k_average,
+            "total_pitch_average": total_pitch_average,
+            "recent_pitch_count_average": recent_pitch_count_average,
+            "worst_k": worst_k
         }
         )
 
-    headers = ["player", "siera", "x_fip", "ip", "score", "recent_k_average", "below_average_count", "overall_k_average"]
-    game_file_name = today_date + '.json'
+    headers = ["player", "siera", "x_fip", "ip", "score", "k_rate","recent_k_average", "below_average_count", "overall_k_average", "total_pitch_average","recent_pitch_count_average", "worst_k"]
+    game_file_name = today_date + '.csv'
     f = open(game_file_name, 'w')
     writer = csv.writer(f)
     writer.writerow(headers)
