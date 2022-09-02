@@ -31,8 +31,8 @@ def scrape_pitcher_data(teams, today_date):
 
     # open today's games
     game_file_name = 'teams/' + today_date + '.json'
-    game_file = open(game_file_name, 'r')
-    games_json = json.load(game_file)
+    # game_file = open(game_file_name, 'r')
+    # games_json = json.load(game_file)
 
     # fetch the player info from fangraphs
     # counter to keep track of missing players
