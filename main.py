@@ -9,6 +9,7 @@ import csv
 def main():
     today_date = datetime.datetime.today().strftime('%m-%d-%Y')
     teams = get_teams()
+    # TODO: Fetch Team advanced batting data
     # team_stats = calculate_teams.calculate_general()
     # lefty_stats = calculate_teams.calculate_general("L")
     # righty_stats = calculate_teams.calculate_general("R")

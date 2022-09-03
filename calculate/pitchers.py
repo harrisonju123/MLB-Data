@@ -9,6 +9,7 @@ def calculate_general(player_stat):
     siera = calculate_siera(overall_pitcher_stats["SIERA"])
     xFIP = calculate_xfip(overall_pitcher_stats["xFIP"])
     k_rate = calculate_strikeout_rate(overall_pitcher_stats["K%"])
+
     player_summary = {
         "siera": siera,
         "x_fip": xFIP,
