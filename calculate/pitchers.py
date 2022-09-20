@@ -8,7 +8,7 @@ def calculate_general(player_stat):
 
     siera = calculate_siera(overall_pitcher_stats["SIERA"])
     xFIP = calculate_xfip(overall_pitcher_stats["xFIP"])
-    k_rate = calculate_strikeout_rate(overall_pitcher_stats["K%"])
+    k_rate = calculate_strikeout_rate(overall_pitcher_stats["K/9"])
 
     player_summary = {
         "siera": siera,
@@ -866,15 +866,4 @@ def calculate_strikeout_rate(k):
     # 5.17 % 7.0 belowaverage
     # 6.15 % 6.0 poor
     # 7.13 % 5.0 awful
-    if k > 0.24:
-        return 10.00 / 9.00
-    elif k > 0.22:
-        return 9.00 / 9.00
-    elif k > 0.2:
-        return 8.20 / 9.00
-    elif k > 0.17:
-        return 7.00 / 9.00
-    elif k > 0.15:
-        return 6.00 / 9.00
-    else:
-        return 5.00 / 9.00
+    return k / 9
